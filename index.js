@@ -1,5 +1,6 @@
 const express = require('express');
 
+
 // Define a Ship class
 class Ship {
   constructor(name, side, health, damage) {
@@ -9,12 +10,17 @@ class Ship {
     this.damage = damage;
   }
 
+
+  
   // Attack another ship and reduce its health
   attack(ship) {
     console.log(`${this.name} attacks ${ship.name} for ${this.damage} damage.`);
     ship.health -= this.damage;
     console.log(`${ship.name} has ${ship.health} health remaining.\n`);
   }
+
+
+  
 
   // Check if the ship is still alive
   isAlive() {
